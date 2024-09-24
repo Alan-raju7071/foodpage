@@ -14,88 +14,91 @@ class Home extends StatelessWidget {
       body: 
        Padding(
         padding: const EdgeInsets.all(10),
-        child: Column(
-          
-          
-          crossAxisAlignment: CrossAxisAlignment.start,
-          
-          children: [
+        child: SingleChildScrollView(
+          child: Column(
             
-              
             
+            
+            crossAxisAlignment: CrossAxisAlignment.start,
+            
+            children: [
               
-               Padding(
-                 padding: const EdgeInsets.symmetric(horizontal: 22,vertical: 20),
-                 child: Text("Find the best recips\nfor cooking",
-                               style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 30,
-                               ),),
-               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 8),
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: "Search recipes",
-                    prefix: Icon(Icons.search,),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(color: Colors.black),
-                      
                 
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                       borderRadius: BorderRadius.circular(10),
-                      borderSide: BorderSide(color: Colors.red),
+              
                 
-                    )
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20,vertical:8 ),
-                child: Row(
-                  children: [
-                    Text("Trending now 🔥",
-                    style: TextStyle(
-                      fontSize: 18,
-                    ),),
-                    Spacer(),
-                    Text("See All",
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.red,
-                    ),),
-                    Icon(Icons.arrow_forward,
-                    color: Colors.red),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 250,
-                child: ListView.separated(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) => customvideocard(
-                    rating:DummyDp.trendingList[index]["rating"],
-                    duration:DummyDp.trendingList[index]["duration"],
-                    imageurl:DummyDp.trendingList[index]["imageurl"], 
-                    profileimage:DummyDp.trendingList[index]["profileimage"],
-                     title:DummyDp.trendingList[index]["title"],
-                      username:DummyDp.trendingList[index]["username"],
-        
-                  ),
-                 separatorBuilder:(context, index) => SizedBox(
-                  width: 16,
+                 Padding(
+                   padding: const EdgeInsets.symmetric(horizontal: 22,vertical: 20),
+                   child: Text("Find the best recips\nfor cooking",
+                                 style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
+                                 ),),
                  ),
-                  itemCount:10),
-              ),
-              SizedBox(height: 10),
-               popularcategory(),
-               
-              
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 8),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: "Search recipes",
+                      prefix: Icon(Icons.search,),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide(color: Colors.black),
+                        
+                  
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                         borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide(color: Colors.red),
+                  
+                      )
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20,vertical:8 ),
+                  child: Row(
+                    children: [
+                      Text("Trending now 🔥",
+                      style: TextStyle(
+                        fontSize: 18,
+                      ),),
+                      Spacer(),
+                      Text("See All",
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.red,
+                      ),),
+                      Icon(Icons.arrow_forward,
+                      color: Colors.red),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 250,
+                  child: ListView.separated(
+                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) => customvideocard(
+                      rating:DummyDp.trendingList[index]["rating"],
+                      duration:DummyDp.trendingList[index]["duration"],
+                      imageurl:DummyDp.trendingList[index]["imageurl"], 
+                      profileimage:DummyDp.trendingList[index]["profileimage"],
+                       title:DummyDp.trendingList[index]["title"],
+                        username:DummyDp.trendingList[index]["username"],
           
-         ],
+                    ),
+                   separatorBuilder:(context, index) => SizedBox(
+                    width: 16,
+                   ),
+                    itemCount:10),
+                ),
+                SizedBox(height: 10),
+                 popularcategory(),
+                 
+                
+            
+           ],
+          ),
         ),
       ),
 
@@ -337,6 +340,38 @@ class popularcategory extends StatelessWidget {
     //   ),
       
     // ])
+    SizedBox(height: 10),
+    Stack(
+      children: [
+        Expanded(
+          child: SizedBox(
+            height: 231,
+            width: 150,
+          ),
+        ),
+        Positioned(
+          bottom: 0,
+          left: 0,
+          right: 0,
+
+          child:Container(
+            height: 176,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: Colors.grey,
+            ),
+          ) 
+          ),
+          Positioned(
+            left: 0,
+            right: 0,
+            child: CircleAvatar(
+            radius: 55,
+          ))
+      ],
+    )
+
+
       ],
     ),
     );
