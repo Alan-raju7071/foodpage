@@ -341,7 +341,31 @@ class popularcategory extends StatelessWidget {
       
     // ])
     SizedBox(height: 10),
-    Stack(
+    
+ SizedBox(
+  height: 231,
+   child: ListView.separated(
+    padding: EdgeInsets.symmetric(horizontal: 20),
+    scrollDirection: Axis.horizontal,
+    itemBuilder:(context, index) => recipes(),
+     separatorBuilder: (context, index) => SizedBox(width: 16), 
+     itemCount: 10),
+ )
+
+      ],
+    ),
+    );
+  }
+}
+
+class recipes extends StatelessWidget {
+  const recipes({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
       children: [
         Expanded(
           child: SizedBox(
@@ -353,7 +377,7 @@ class popularcategory extends StatelessWidget {
           bottom: 0,
           left: 0,
           right: 0,
-
+    
           child:Container(
             height: 176,
             decoration: BoxDecoration(
@@ -369,11 +393,6 @@ class popularcategory extends StatelessWidget {
             radius: 55,
           ))
       ],
-    )
-
-
-      ],
-    ),
     );
   }
 }
