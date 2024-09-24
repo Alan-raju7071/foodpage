@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodpage/view/bookmark/bookmark.dart';
 import 'package:foodpage/view/home/home.dart';
 
 class Bottomnavigation extends StatefulWidget {
@@ -12,7 +13,7 @@ class _BottomnavigationState extends State<Bottomnavigation> {
   int selected=0;
   List selectedsreen=[
     Home(),
-    Container(),
+    Bookmark(),
     Container(),
     Container(),
 

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:foodpage/bottomnavigation/bottomnavigation.dart';
+import 'package:foodpage/view/myprofile/myprifile.dart';
 import 'package:foodpage/view/onboardscreen/onboardscreen.dart';
+
+
 
 
 
@@ -22,7 +24,7 @@ class Myapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Onboardscreen()
+      home: Myprifile()
     );
   }
 }

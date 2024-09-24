@@ -379,10 +379,62 @@ class recipes extends StatelessWidget {
           right: 0,
     
           child:Container(
+            padding: EdgeInsets.all(12),
+            
             height: 176,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               color: Colors.grey,
+            ),
+            child: Column(
+              
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SizedBox(),
+                Text("Pepper sweetcorn",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600
+                ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+      
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+
+                      children: [
+                        Text("Time",
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                          fontSize: 12,
+                          
+                          color: Colors.black,
+                        ),),
+                        Text("20 mins",
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black
+                        ),
+                        ),
+                       
+                      ],
+                    ),
+                                   CircleAvatar(
+                          radius: 12,
+
+                          backgroundImage: NetworkImage(""),
+                          child: Icon(Icons.bookmark_border,size: 16),
+                        ),
+
+                  ],
+                )
+                
+              ],
             ),
           ) 
           ),
