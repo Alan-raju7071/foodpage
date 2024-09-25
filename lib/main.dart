@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:foodpage/view/myprofile/myprifile.dart';
-import 'package:foodpage/view/onboardscreen/onboardscreen.dart';
-
-
-
-
 
 
 

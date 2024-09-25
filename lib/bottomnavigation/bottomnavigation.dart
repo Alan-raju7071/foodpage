@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodpage/view/bookmark/bookmark.dart';
 import 'package:foodpage/view/home/home.dart';
+import 'package:foodpage/view/myprofile/myprifile.dart';
 
 class Bottomnavigation extends StatefulWidget {
   const Bottomnavigation({super.key});
@@ -15,7 +16,7 @@ class _BottomnavigationState extends State<Bottomnavigation> {
     Home(),
     Bookmark(),
     Container(),
-    Container(),
+    Myprifile()
 
   ];
   @override
