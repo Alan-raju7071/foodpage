@@ -244,7 +244,16 @@ class Myprifile extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 20,vertical:24 ),
                       
                   
-                      itemBuilder: (context, index) => CustomRecipeeCard(),
+                      itemBuilder: (context, index) => CustomRecipeeCard(
+                        
+                        rating:DummyDp.trendingList[index]["rating"],
+                        
+                        imageurl:DummyDp.trendingList[index]["imageurl"], 
+                        
+                         title:DummyDp.trendingList[index]["title"],
+                          
+
+                      ),
                      separatorBuilder:(context, index) => SizedBox(
                       height: 16,
                       

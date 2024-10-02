@@ -3,7 +3,8 @@
 
 
 
-class  Customvideocard extends StatelessWidget {
+
+  class  Customvideocard extends StatelessWidget {
   String imageurl;
   String rating;
   String duration;
@@ -24,11 +25,12 @@ class  Customvideocard extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: 280,
+      width: 300,
       
       child: Column(
         children: [
           Container(
-            height: 200,
+            height: 180,
             
             padding: EdgeInsets.all(10),
           

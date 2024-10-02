@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:foodpage/view/myprofile/myprifile.dart';
+import 'package:foodpage/view/home/home.dart';
+import 'package:foodpage/view/splash/splash.dart';
+
 
 
 
@@ -19,7 +21,7 @@ class Myapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Myprifile()
+      home: Splash()
     );
   }
 }
