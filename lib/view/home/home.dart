@@ -200,11 +200,9 @@ class recipes extends StatelessWidget {
       children: [
         Stack(
           children: [
-            Expanded(
-              child: SizedBox(
-                height: 231,
-                width: 150,
-              ),
+            SizedBox(
+              height: 231,
+              width: 150,
             ),
             Positioned(
               bottom: 0,
@@ -279,6 +277,7 @@ class recipes extends StatelessWidget {
               ))
           ],
         ),
+      
       ],
     );
   }

@@ -83,6 +83,18 @@ class DummyDp{
     "username": "PizzaFanatic"
   }
 ];
+static List recipeeList=[
+  {
+     "imageurl": "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "rating": "4.8",
+    "duration": "20:00",
+    "profileimage": "https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "title": "Classic Spaghetti Carbonara",
+    "username": "ChefMario"
+     
+  }
+];
+
 }
 
 
