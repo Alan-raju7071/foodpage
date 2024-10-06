@@ -38,7 +38,7 @@ class DummyDp{
     "imageurl": "https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?auto=compress&cs=tinysrgb&w=600",
     "rating": "4.9",
     "duration": "45:00",
-    "profileimage": "https://images.pexels.com/photos/1080213/pexels-photo-1080213.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "profileimage": "https://images.pexels.com/photos/4625881/pexels-photo-4625881.jpeg?auto=compress&cs=tinysrgb&w=600",
     "title": "Homemade Chicken Tikka Masala",
     "username": "SpiceLover"
   },

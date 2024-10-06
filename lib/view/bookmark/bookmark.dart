@@ -55,6 +55,8 @@ class Bookmark extends StatelessWidget {
                         onCardTaped: () {
                           Navigator.push(context,
                            MaterialPageRoute(builder: (context) => RecipeeDetails(
+                            image: DummyDp.trendingList[index]["imageurl"],
+                            photo:DummyDp.trendingList[index]["title"] ,
                             rating:DummyDp.trendingList[index]["rating"],
                         duration:DummyDp.trendingList[index]["duration"],
                         imageurl:DummyDp.trendingList[index]["imageurl"], 

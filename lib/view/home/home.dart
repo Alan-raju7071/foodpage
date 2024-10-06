@@ -98,9 +98,123 @@ class Home extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
                    Popularcategory(),
+                   SizedBox(height: 14),
                    
+                 Row(
+                  children: [
+                    Text("Recent recipe",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600
+                    ),
+                    ),
+                    Spacer(),
+                    Text("See all",
+                     style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: ColrConst.primaryColor,
+                     ),
+                    ),
+                    Icon(Icons.arrow_forward)
+
+                  ],
+                 ) ,
+                 SizedBox(height: 10),
+                 SizedBox(
+                  height:191 ,
                   
-              
+                   child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    
+                    itemCount: DummyDp.trendingList.length,
+                    itemBuilder: (context, index) => SizedBox(
+                    width: 220,
+                    height: 191,
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 124,
+                          width: 124,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: NetworkImage(DummyDp.trendingList[index]["imageurl"]))
+                          ),
+                        ),
+                        Text(DummyDp.trendingList[index]["title"],
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600
+                        ),
+                        ),
+                        Text(DummyDp.trendingList[index]["username"],
+                        style: TextStyle(
+                          fontSize: 10,
+                          fontWeight: FontWeight.w400
+                        ),
+                        )
+                   
+                      ],
+                    ),
+                   )
+                                  ,),
+                 ),
+                   SizedBox(height: 14),
+                   
+                 Row(
+                  children: [
+                    Text("Popular creators",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600
+                    ),
+                    ),
+                    Spacer(),
+                    Text("See all",
+                     style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: ColrConst.primaryColor,
+                     ),
+                    ),
+                    Icon(Icons.arrow_forward)
+
+                  ],
+                 ) ,
+                 SizedBox(height: 10),
+                 SizedBox(
+                   height:119 ,
+                    
+                   child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                     itemCount: DummyDp.trendingList.length,
+                    itemBuilder: (context, index) =>  SizedBox(
+                    height:119 ,
+                    width:75 ,
+                    child: Column(
+                      children: [
+                        CircleAvatar(
+                         radius:35 ,
+                          
+                          backgroundImage: NetworkImage(DummyDp.trendingList[index]["profileimage"],),
+                        ),
+                        Text(DummyDp.trendingList[index]["username"],
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600
+                   
+                        ),
+                        )
+                      ],
+                    ),
+                   
+                   )
+                   ,),
+                 )
+                
+               
              ],
             ),
           ),
@@ -181,7 +295,8 @@ class Popularcategory extends StatelessWidget {
                          title:DummyDp.trendingList[index]["title"],),
      separatorBuilder: (context, index) => SizedBox(width: 16), 
      itemCount: 10),
- ),],
+ ),
+ ],
  ),);
 
         
