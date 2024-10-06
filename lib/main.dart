@@ -1,14 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foodpage/view/recipee_details/recipee_details.dart';
-
-
-
-
-
-
-
-
-
+import 'package:foodpage/view/home/home.dart';
 
 
 
@@ -22,7 +13,7 @@ class Myapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: RecipeeDetails()
+      home: Home()
     );
   }
 }

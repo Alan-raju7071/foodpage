@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodpage/view/bookmark/bookmark.dart';
+import 'package:foodpage/view/create_page/create_page.dart';
 import 'package:foodpage/view/home/home.dart';
 import 'package:foodpage/view/myprofile/myprifile.dart';
 
@@ -28,7 +29,10 @@ class _BottomnavigationState extends State<Bottomnavigation> {
       floatingActionButton: FloatingActionButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
         backgroundColor: Colors.white,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context,
+          MaterialPageRoute(builder: (context) => CreatePage(),));
+        },
         child: Icon(
           Icons.add,
           color: Colors.black,

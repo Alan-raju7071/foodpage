@@ -54,7 +54,14 @@ class Bookmark extends StatelessWidget {
                       itemBuilder: (context, index) => Customvideocard(
                         onCardTaped: () {
                           Navigator.push(context,
-                           MaterialPageRoute(builder: (context) => RecipeeDetails(),));
+                           MaterialPageRoute(builder: (context) => RecipeeDetails(
+                            rating:DummyDp.trendingList[index]["rating"],
+                        duration:DummyDp.trendingList[index]["duration"],
+                        imageurl:DummyDp.trendingList[index]["imageurl"], 
+                        profileimage:DummyDp.trendingList[index]["profileimage"],
+                         title:DummyDp.trendingList[index]["title"],
+                          username:DummyDp.trendingList[index]["username"],
+                           ),));
                         },
                       
                         rating:DummyDp.trendingList[index]["rating"],

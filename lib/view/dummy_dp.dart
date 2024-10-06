@@ -59,7 +59,7 @@ class DummyDp{
     "username": "SmoothieExpert"
   },
   {
-    "imageurl": "https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "imageurl": "https://images.pexels.com/photos/1199957/pexels-photo-1199957.jpeg?auto=compress&cs=tinysrgb&w=600",
     "rating": "4.8",
     "duration": "25:00",
     "profileimage": "https://images.pexels.com/photos/1559486/pexels-photo-1559486.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -93,6 +93,74 @@ static List recipeeList=[
     "username": "ChefMario"
      
   }
+];
+
+
+
+
+
+static List ingredientList=[
+  {
+     "imageurl": "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=600",
+    
+    "duration": "200g",
+    
+    "title": "milk",
+    
+     
+  },
+
+
+   {
+     "imageurl": "https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=600" ,
+    
+    "duration": "200g",
+   
+    "title": "egg",
+    
+     
+  },
+   {
+     "imageurl": "https://images.pexels.com/photos/1199957/pexels-photo-1199957.jpeg?auto=compress&cs=tinysrgb&w=600",
+    
+    "duration": "200g",
+    
+    "title": "bread",
+    
+     
+  },
+   {
+    "imageurl": "https://images.pexels.com/photos/769289/pexels-photo-769289.jpeg?auto=compress&cs=tinysrgb&w=600" ,
+     
+    
+    "duration": "200g",
+   
+    "title": "butter",
+    
+     
+  },
+   {
+     "imageurl":"https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?auto=compress&cs=tinysrgb&w=600",
+    
+    "duration": "200g",
+   
+    "title": "vanilla",
+    
+     
+  },
+];
+
+static List customList=[
+  {
+     "imageurl": "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=600",
+    
+    "duration": "01",
+    
+    "title": "server",
+    
+     
+  },
+   
 ];
 
 }

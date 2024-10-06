@@ -175,7 +175,10 @@ class Popularcategory extends StatelessWidget {
    child: ListView.separated(
     padding: EdgeInsets.symmetric(horizontal: 20),
     scrollDirection: Axis.horizontal,
-    itemBuilder:(context, index) => recipes(),
+    itemBuilder:(context, index) => recipes( duration:DummyDp.trendingList[index]["duration"],
+                        imageurl:DummyDp.trendingList[index]["imageurl"], 
+                        profileimage:DummyDp.trendingList[index]["profileimage"],
+                         title:DummyDp.trendingList[index]["title"],),
      separatorBuilder: (context, index) => SizedBox(width: 16), 
      itemCount: 10),
  ),],
@@ -190,7 +193,15 @@ class Popularcategory extends StatelessWidget {
 }
 
 class recipes extends StatelessWidget {
-  const recipes({
+   String imageurl;
+    String duration;
+  String profileimage;
+  String title;
+   recipes({
+     required this.duration,
+    required this.imageurl,
+     required this.profileimage,
+      required this.title,
     super.key,
   });
 
@@ -215,14 +226,16 @@ class recipes extends StatelessWidget {
                 height: 176,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.grey,
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: NetworkImage("$imageurl"))
                 ),
                 child: Column(
                   
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     SizedBox(),
-                    Text("Pepper sweetcorn",
+                    Text("$title",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
@@ -238,7 +251,7 @@ class recipes extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
         
                           children: [
-                            Text("Time",
+                            Text("$duration",
                             textAlign: TextAlign.start,
                             style: TextStyle(
                               fontSize: 12,
@@ -258,7 +271,7 @@ class recipes extends StatelessWidget {
                                        CircleAvatar(
                               radius: 12,
         
-                              backgroundImage: NetworkImage(""),
+                              
                               child: Icon(Icons.bookmark_border,size: 16),
                             ),
         
@@ -273,10 +286,12 @@ class recipes extends StatelessWidget {
                 left: 0,
                 right: 0,
                 child: CircleAvatar(
+                  backgroundImage: NetworkImage("$profileimage"),
                 radius: 55,
               ))
           ],
         ),
+        
       
       ],
     );
